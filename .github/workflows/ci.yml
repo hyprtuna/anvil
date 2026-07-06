@@ -1,26 +1,24 @@
 name: CI
 
 on:
-  push:
-    branches: [main]
   pull_request:
     branches: [main]
+  push:
+    branches: [main]
+
+# Cancel superseded runs on the same ref (e.g. rapid AI-PR pushes).
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  test:
+  gate:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
         with:
-          bun-version: latest
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 22
+          bun-version: 1.3.13
       - run: bun install --frozen-lockfile
-      - run: bun run typecheck
-      - run: bun run lint
-      - run: bun run build
-      - name: Check routing-rules-content.ts is up to date
-        run: bun run scripts/generate-routing-rules.ts --check
-      - run: bun run test
+      - run: bun run gate

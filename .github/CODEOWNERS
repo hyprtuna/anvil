@@ -1,0 +1,4 @@
+# Every change requires review from the repository owner.
+# Combined with the branch ruleset's require_code_owner_review, this makes
+# @hyprtuna the required approver on all pull requests.
+* @hyprtuna
