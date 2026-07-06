@@ -1,0 +1,162 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`baseline — agent render byte-for-byte snapshot > claude-code emits the expected agents/<name>.md set (live tree) 1`] = `
+{
+  "adapter": "claude-code",
+  "agentFileCount": 18,
+  "files": [
+    {
+      "bytes": 2921,
+      "path": "agents/build-error-resolver.md",
+      "preview": "---
+name: build-error-resolver
+description: 'Use when build ",
+      "sha": "97f46653",
+    },
+    {
+      "bytes": 8885,
+      "path": "agents/code-architect.md",
+      "preview": "---
+name: code-architect
+description: Proposes 2-3 implement",
+      "sha": "8dac4cbe",
+    },
+    {
+      "bytes": 8784,
+      "path": "agents/code-explorer.md",
+      "preview": "---
+name: code-explorer
+description: 'Maps entry points, cal",
+      "sha": "2e899177",
+    },
+    {
+      "bytes": 5074,
+      "path": "agents/code-quality-reviewer.md",
+      "preview": "---
+name: code-quality-reviewer
+description: 'Read-only Stag",
+      "sha": "1955841f",
+    },
+    {
+      "bytes": 12086,
+      "path": "agents/code-reviewer.md",
+      "preview": "---
+name: code-reviewer
+description: 'Reviews code changes i",
+      "sha": "abab3e35",
+    },
+    {
+      "bytes": 10863,
+      "path": "agents/code-simplifier.md",
+      "preview": "---
+name: code-simplifier
+description: Simplifies code for c",
+      "sha": "12b0caf5",
+    },
+    {
+      "bytes": 3045,
+      "path": "agents/doc-verifier.md",
+      "preview": "---
+name: doc-verifier
+description: 'Verifies documentation ",
+      "sha": "68631eac",
+    },
+    {
+      "bytes": 9617,
+      "path": "agents/framework-selector.md",
+      "preview": "---
+name: framework-selector
+description: Evaluates competin",
+      "sha": "05c8139d",
+    },
+    {
+      "bytes": 2081,
+      "path": "agents/mcp-builder.md",
+      "preview": "---
+name: mcp-builder
+description: Scaffold and build MCP se",
+      "sha": "4b8f8c37",
+    },
+    {
+      "bytes": 15497,
+      "path": "agents/orchestrator.md",
+      "preview": "---
+name: orchestrator
+description: 'Tier 2 parallel fan-out",
+      "sha": "79663cf4",
+    },
+    {
+      "bytes": 12857,
+      "path": "agents/plan-verifier.md",
+      "preview": "---
+name: plan-verifier
+description: Verifies implementation",
+      "sha": "23dc989b",
+    },
+    {
+      "bytes": 8079,
+      "path": "agents/researcher.md",
+      "preview": "---
+name: researcher
+description: 'Deep research agent — inv",
+      "sha": "02e1d67c",
+    },
+    {
+      "bytes": 9512,
+      "path": "agents/silent-failure-hunter.md",
+      "preview": "---
+name: silent-failure-hunter
+description: 'Identifies sil",
+      "sha": "6c6ecf75",
+    },
+    {
+      "bytes": 4020,
+      "path": "agents/spec-reviewer.md",
+      "preview": "---
+name: spec-reviewer
+description: 'Read-only Stage 1 spec",
+      "sha": "5eddba5e",
+    },
+    {
+      "bytes": 7371,
+      "path": "agents/strict-reviewer.md",
+      "preview": "---
+name: strict-reviewer
+description: 'Adversarial code rev",
+      "sha": "79092f55",
+    },
+    {
+      "bytes": 8493,
+      "path": "agents/subagent-executor.md",
+      "preview": "---
+name: subagent-executor
+description: Executes implementa",
+      "sha": "19e06565",
+    },
+    {
+      "bytes": 9199,
+      "path": "agents/test-analyzer.md",
+      "preview": "---
+name: test-analyzer
+description: 'Reviews test coverage ",
+      "sha": "3fe83dd8",
+    },
+    {
+      "bytes": 13803,
+      "path": "agents/ultra-worker.md",
+      "preview": "---
+name: ultra-worker
+description: 'Tier 3 autonomous execu",
+      "sha": "3b153333",
+    },
+  ],
+}
+`;
+
+exports[`baseline — agent render byte-for-byte snapshot > opencode emits NO agents/* paths (live tree) 1`] = `
+{
+  "adapter": "opencode",
+  "agentFileCount": 0,
+  "files": [],
+}
+`;

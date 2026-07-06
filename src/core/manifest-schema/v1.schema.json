@@ -1,0 +1,211 @@
+{
+  "$ref": "#/definitions/ClaudeCodePluginManifest",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "ClaudeCodePluginManifest": {
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "const": "https://anvil.dev/schemas/plugin-manifest/v1.json",
+          "type": "string"
+        },
+        "author": {
+          "additionalProperties": false,
+          "properties": {
+            "email": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "type": "object"
+        },
+        "description": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "homepage": {
+          "format": "uri",
+          "type": "string"
+        },
+        "hooks": {
+          "additionalProperties": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "hooks": {
+                  "items": {
+                    "anyOf": [
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "command": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "timeout": {
+                            "exclusiveMinimum": 0,
+                            "type": "integer"
+                          },
+                          "type": {
+                            "const": "command",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "command"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "headers": {
+                            "additionalProperties": {
+                              "type": "string"
+                            },
+                            "type": "object"
+                          },
+                          "method": {
+                            "enum": [
+                              "GET",
+                              "POST",
+                              "PUT",
+                              "PATCH",
+                              "DELETE"
+                            ],
+                            "type": "string"
+                          },
+                          "timeout": {
+                            "exclusiveMinimum": 0,
+                            "type": "integer"
+                          },
+                          "type": {
+                            "const": "http",
+                            "type": "string"
+                          },
+                          "url": {
+                            "format": "uri",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "url"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "prompt": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "timeout": {
+                            "exclusiveMinimum": 0,
+                            "type": "integer"
+                          },
+                          "type": {
+                            "const": "prompt",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "prompt"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "agent": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "timeout": {
+                            "exclusiveMinimum": 0,
+                            "type": "integer"
+                          },
+                          "type": {
+                            "const": "agent",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "agent"
+                        ],
+                        "type": "object"
+                      }
+                    ]
+                  },
+                  "type": "array"
+                },
+                "if": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  ]
+                },
+                "matcher": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "hooks"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "type": "object"
+        },
+        "keywords": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "license": {
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "schemaVersion": {
+          "const": 1,
+          "type": "number"
+        },
+        "version": {
+          "pattern": "^\\d+\\.\\d+\\.\\d+",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "name",
+        "version",
+        "description"
+      ],
+      "type": "object"
+    }
+  }
+}

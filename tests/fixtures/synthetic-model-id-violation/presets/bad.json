@@ -1,0 +1,8 @@
+{
+  "$schema": "https://anvil.dev/schemas/models.json",
+  "version": "1.0",
+  "defaults": {
+    "model": "claude-opus-4-6",
+    "effort": "high"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "js-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "echo 'fixture: no tests' && exit 0" },
+  "dependencies": { "next": "14.0.0", "react": "18.2.0" },
+  "devDependencies": { "typescript": "^5.3.0", "vitest": "^1.2.0" }
+}

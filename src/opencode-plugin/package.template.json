@@ -1,0 +1,7 @@
+{
+  "name": "@anvil/opencode-plugin",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "index.js",
+  "description": "Anvil plugin for OpenCode — registers skills and injects bootstrap"
+}

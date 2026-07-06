@@ -1,0 +1,9 @@
+[project]
+name = "python-fixture"
+version = "1.0.0"
+dependencies = ["fastapi>=0.110.0"]
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff"]
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"

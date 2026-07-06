@@ -1,0 +1,15 @@
+---
+cases:
+  - prompt: "Review this screen's UX."
+    shouldMatch: true
+    description: "general UX review routing"
+  - prompt: "What UX rules apply to error states?"
+    shouldMatch: true
+    description: "rule-lookup routing"
+  - prompt: "Fitts's Law — how does it apply here?"
+    shouldMatch: true
+    description: "named-law routing"
+  - prompt: "Deploy this Docker container."
+    shouldMatch: false
+    description: "should not match infra requests"
+---

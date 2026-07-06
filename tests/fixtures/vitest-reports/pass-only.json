@@ -1,0 +1,40 @@
+{
+  "numTotalTestSuites": 2,
+  "numPassedTestSuites": 2,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 10,
+  "numPassedTests": 10,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "startTime": 1700000000000,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["my suite"],
+          "fullName": "my suite test one",
+          "status": "passed",
+          "title": "test one",
+          "duration": 5,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": ["my suite"],
+          "fullName": "my suite test two",
+          "status": "passed",
+          "title": "test two",
+          "duration": 3,
+          "failureMessages": []
+        }
+      ],
+      "startTime": 1700000000000,
+      "endTime": 1700000000100,
+      "status": "passed",
+      "message": "",
+      "name": "/repo/tests/unit/example.test.ts"
+    }
+  ]
+}

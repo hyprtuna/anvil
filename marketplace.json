@@ -1,0 +1,18 @@
+{
+  "$schema": "https://claude.ai/marketplace/schema.json",
+  "name": "anvil",
+  "version": "0.18.0",
+  "description": "Language-aware, role-aware skill system for Claude Code and OpenCode — hybrid CLI and plugin",
+  "author": { "name": "Anvil maintainers" },
+  "license": "MIT",
+  "keywords": ["claude", "claude-code", "opencode", "skills", "hooks", "plugin", "orchestration"],
+  "categories": ["developer-tools", "orchestration", "agents"],
+  "platforms": ["claude-code", "opencode"],
+  "install": { "cli": "npx anvil init" },
+  "features": [
+    "79 universal skills + language overlays",
+    "30 lifecycle hooks",
+    "18 agents",
+    "layered model resolution with 4 presets"
+  ]
+}

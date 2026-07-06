@@ -1,0 +1,78 @@
+{
+  "description": "Labeled prompts for the router eval harness. Each row: { prompt, expected }. Add rows, never remove — this is the regression corpus.",
+  "minimumAccuracy": 0.75,
+  "prompts": [
+    { "prompt": "debug the failing checkout test", "expected": "debug" },
+    { "prompt": "fix the bug in the session refresh flow", "expected": "debug" },
+    { "prompt": "this auth module is broken after the deploy", "expected": "debug" },
+    { "prompt": "trace the null pointer error in the payment handler", "expected": "debug" },
+    { "prompt": "the login is flaky on firefox", "expected": "debug" },
+    { "prompt": "intermittent 500 errors when the job queue is full", "expected": "debug" },
+
+    { "prompt": "write tests for the new parser module", "expected": "test" },
+    { "prompt": "do tdd on the order endpoint", "expected": "test" },
+    { "prompt": "improve coverage on the billing core", "expected": "test" },
+    { "prompt": "add a regression test for the race condition", "expected": "test" },
+    { "prompt": "write a spec for the validator", "expected": "test" },
+
+    { "prompt": "review this PR for correctness", "expected": "review" },
+    { "prompt": "audit the authentication layer", "expected": "review" },
+    { "prompt": "check the code quality of the new endpoint", "expected": "review" },
+    { "prompt": "give me feedback on the migration", "expected": "review" },
+    { "prompt": "look at my pr and let me know", "expected": "review" },
+
+    { "prompt": "plan the next release milestones", "expected": "plan" },
+    { "prompt": "break down the onboarding feature into subtasks", "expected": "plan" },
+    { "prompt": "architect the new events pipeline", "expected": "plan" },
+    { "prompt": "design the rollout plan for the flag flip", "expected": "plan" },
+    { "prompt": "produce a roadmap for the API redesign", "expected": "plan" },
+
+    { "prompt": "research available webhook delivery options", "expected": "research" },
+    { "prompt": "investigate the spike in latency yesterday", "expected": "research" },
+    { "prompt": "analyze and compare the three caching libraries", "expected": "research" },
+    { "prompt": "what are the alternatives to bullmq", "expected": "research" },
+    { "prompt": "look at the state of the art in edge caching", "expected": "research" },
+
+    { "prompt": "refactor the billing service", "expected": "refactor" },
+    { "prompt": "simplify this deeply nested conditional", "expected": "refactor" },
+    { "prompt": "clean up this mess of callbacks", "expected": "refactor" },
+    { "prompt": "restructure the workers module", "expected": "refactor" },
+    { "prompt": "consolidate the three validation helpers into one", "expected": "refactor" },
+
+    { "prompt": "write documentation for the plugin API", "expected": "document" },
+    { "prompt": "update the readme with the new install flow", "expected": "document" },
+    { "prompt": "document the retry semantics of the scheduler", "expected": "document" },
+    { "prompt": "write up the migration guide for the schema change", "expected": "document" },
+
+    { "prompt": "explore the codebase structure", "expected": "explore" },
+    { "prompt": "explain how the webhook retry queue works", "expected": "explore" },
+    { "prompt": "map the architecture of the billing subsystem", "expected": "explore" },
+    { "prompt": "where is the rate limiter configured", "expected": "explore" },
+    { "prompt": "give me a tour of the hooks directory", "expected": "explore" },
+
+    { "prompt": "build an mcp server for the internal search API", "expected": "mcp" },
+    { "prompt": "wire up model context protocol for jira", "expected": "mcp" },
+    { "prompt": "add an mcp tool server for the local code index", "expected": "mcp" },
+    { "prompt": "expose an sse endpoint over mcp", "expected": "mcp" },
+
+    { "prompt": "respond to the review comments on the pr", "expected": "review-respond" },
+    { "prompt": "address the review notes before merging", "expected": "review-respond" },
+    { "prompt": "apply the feedback from the security review", "expected": "review-respond" },
+    { "prompt": "resolve comments on the PR and push", "expected": "review-respond" },
+    { "prompt": "incorporate the feedback and push again", "expected": "review-respond" },
+
+    { "prompt": "install anvil in this repo", "expected": "install" },
+    { "prompt": "bootstrap the project with anvil", "expected": "install" },
+    { "prompt": "init anvil here", "expected": "install" },
+    { "prompt": "uninstall anvil and clean up", "expected": "install" },
+
+    { "prompt": "go ultra on the remaining backlog", "expected": "autonomous" },
+    { "prompt": "fully handle the release prep end to end", "expected": "autonomous" },
+    { "prompt": "take care of the issue autonomously", "expected": "autonomous" },
+    { "prompt": "just do it — all the way through", "expected": "autonomous" },
+
+    { "prompt": "ship the feature without tests for now", "expected": "_veto:test" },
+    { "prompt": "don't refactor this, just add the new flag", "expected": "_veto:refactor" },
+    { "prompt": "this is working as intended, not a bug", "expected": "_veto:debug" }
+  ]
+}

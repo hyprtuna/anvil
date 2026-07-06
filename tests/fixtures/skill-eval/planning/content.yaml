@@ -1,0 +1,7 @@
+---
+cases:
+  - contains: "plan"
+    description: "mentions planning"
+  - contains: "task"
+    description: "discusses tasks"
+---

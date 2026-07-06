@@ -1,0 +1,4 @@
+#!/usr/bin/env php
+<?php
+// Laravel artisan stub for fixture detection
+define('LARAVEL_START', microtime(true));

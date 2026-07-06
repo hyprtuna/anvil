@@ -1,0 +1,48 @@
+{
+  "numTotalTestSuites": 2,
+  "numPassedTestSuites": 1,
+  "numFailedTestSuites": 1,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 10,
+  "numPassedTests": 8,
+  "numFailedTests": 2,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "startTime": 1700000000000,
+  "success": false,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["my suite"],
+          "fullName": "my suite test one",
+          "status": "passed",
+          "title": "test one",
+          "duration": 5,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": ["my suite"],
+          "fullName": "my suite test two",
+          "status": "failed",
+          "title": "test two",
+          "duration": 3,
+          "failureMessages": ["Expected 1 to be 2"]
+        },
+        {
+          "ancestorTitles": ["other suite"],
+          "fullName": "other suite test three",
+          "status": "failed",
+          "title": "test three",
+          "duration": 2,
+          "failureMessages": ["TypeError: Cannot read property 'x' of undefined"]
+        }
+      ],
+      "startTime": 1700000000000,
+      "endTime": 1700000000200,
+      "status": "failed",
+      "message": "",
+      "name": "/repo/tests/unit/example.test.ts"
+    }
+  ]
+}

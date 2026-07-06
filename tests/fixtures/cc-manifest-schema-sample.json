@@ -1,0 +1,35 @@
+{
+  "name": "claude-mem",
+  "version": "0.1.0",
+  "description": "Persistent memory for Claude Code — store and recall context across sessions",
+  "author": {
+    "name": "Claude Mem Contributors",
+    "url": "https://github.com/example/claude-mem"
+  },
+  "license": "MIT",
+  "keywords": ["claude", "memory", "context", "persistence"],
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/session-start.cjs"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/session-end.cjs"
+          }
+        ]
+      }
+    ]
+  }
+}

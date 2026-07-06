@@ -1,0 +1,13 @@
+---
+cases:
+  - contains: "Root Cause"
+    description: "covers root cause investigation"
+  - contains: "Phase 1"
+    description: "has Phase 1 methodology"
+  - contains: "Phase 2"
+    description: "has Phase 2 methodology"
+  - contains: "Iron Law"
+    description: "includes the Iron Law"
+  - contains: "Failing Test"
+    description: "requires failing test before fix"
+---

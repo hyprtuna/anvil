@@ -1,0 +1,12 @@
+---
+cases:
+  - prompt: "plan this feature implementation"
+    shouldMatch: true
+    description: "matches on plan trigger"
+  - prompt: "create a roadmap for the project"
+    shouldMatch: true
+    description: "matches on roadmap trigger"
+  - prompt: "debug this crash"
+    shouldMatch: false
+    description: "should not match debugging requests"
+---

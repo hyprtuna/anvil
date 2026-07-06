@@ -1,0 +1,15 @@
+---
+cases:
+  - prompt: "Build a colour palette for a SaaS product."
+    shouldMatch: true
+    description: "palette construction routing"
+  - prompt: "Derive a dark-mode version of this palette."
+    shouldMatch: true
+    description: "dark-mode derivation routing"
+  - prompt: "The contrast is failing WCAG AA on my buttons."
+    shouldMatch: true
+    description: "WCAG contrast routing"
+  - prompt: "Write a TypeScript ORM."
+    shouldMatch: false
+    description: "should not match unrelated coding requests"
+---

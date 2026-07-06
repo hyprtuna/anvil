@@ -1,0 +1,11 @@
+---
+cases:
+  - contains: "Brutalist"
+    description: "covers Brutalist style family"
+  - contains: "Soft UI"
+    description: "covers Soft UI style family"
+  - contains: "industry"
+    description: "includes industry mapping"
+  - contains: "anti-pattern"
+    description: "lists anti-patterns explicitly"
+---

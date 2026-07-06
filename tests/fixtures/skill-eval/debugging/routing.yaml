@@ -1,0 +1,18 @@
+---
+cases:
+  - prompt: "debug this crash in the auth module"
+    shouldMatch: true
+    description: "matches on debug trigger"
+  - prompt: "fix this bug in login"
+    shouldMatch: true
+    description: "matches on bug trigger"
+  - prompt: "the server is not working"
+    shouldMatch: true
+    description: "matches on not working trigger"
+  - prompt: "refactor this function to be cleaner"
+    shouldMatch: false
+    description: "should not match refactoring requests"
+  - prompt: "write a new API endpoint for users"
+    shouldMatch: false
+    description: "should not match feature requests"
+---

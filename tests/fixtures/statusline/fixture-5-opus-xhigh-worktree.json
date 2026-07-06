@@ -1,0 +1,12 @@
+{
+  "cwd": "/home/user/project/.worktrees/feat-x",
+  "session_id": "session-5",
+  "model": { "id": "claude-opus-4-7", "display_name": "Opus" },
+  "output_style": { "name": "xhigh" },
+  "worktree": {
+    "name": "feat-x",
+    "path": "/home/user/project/.worktrees/feat-x",
+    "branch": "feature/awesome",
+    "original_cwd": "/home/user/project"
+  }
+}

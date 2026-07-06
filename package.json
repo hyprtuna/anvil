@@ -1,0 +1,107 @@
+{
+  "name": "anvil",
+  "version": "0.18.0",
+  "description": "Language-aware, role-aware skill system for Claude Code and OpenCode \u2014 hybrid CLI and plugin",
+  "type": "module",
+  "bin": {
+    "anvil": "./bin/anvil"
+  },
+  "files": [
+    "dist/",
+    "bin/",
+    "bin/anvil.cjs",
+    "skills/",
+    "agents/",
+    "hooks/",
+    "templates/",
+    "presets/",
+    "src/core/manifest-schema/v1.schema.json",
+    "data/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bun run tsc && node scripts/build-hooks.mjs && node scripts/build-bundle.mjs && node scripts/build-opencode-plugin.mjs",
+    "doctor:strict": "node ./dist/index.js doctor --strict",
+    "dev": "bun run src/index.ts",
+    "tui": "bun run src/tui/installer.ts",
+    "test": "bun run vitest run",
+    "test:full": "bun run vitest run",
+    "test:smoke": "bun run vitest run --config vitest.smoke.config.ts",
+    "test:fast": "bun run vitest run --config vitest.fast.config.ts",
+    "test:adapter": "bun run vitest run --config vitest.adapter.config.ts",
+    "test:skill-e2e": "ANVIL_RUN_SKILL_E2E=1 bun run vitest run tests/integration/skill-e2e/",
+    "test:watch": "bun run vitest",
+    "test:e2e:llm": "ANVIL_E2E_AGENT=llm bun run vitest run tests/integration/skill-e2e/",
+    "build:experimental": "bun run tsc -p tsconfig.experimental.json && node scripts/build-hooks.mjs && node scripts/build-bundle.mjs && node scripts/build-opencode-plugin.mjs",
+    "test:experimental": "bun run vitest run --config vitest.experimental.config.ts",
+    "typecheck": "bun run tsc --noEmit",
+    "typecheck:experimental": "bun run tsc -p tsconfig.experimental.json --noEmit",
+    "lint": "bun run biome check src/ tests/",
+    "lint:fix": "bun run biome check --write src/ tests/",
+    "gate": "bunx tsx scripts/ci/gate.ts",
+    "gate:fast": "bunx tsx scripts/ci/gate-fast.ts",
+    "check:rebase-base": "bunx tsx scripts/ci/check-rebase-base.ts",
+    "docs:check": "bun run scripts/docs-check.ts",
+    "generate:schema": "bun scripts/generate-schema.ts",
+    "generate:routing-rules": "bun scripts/generate-routing-rules.ts",
+    "bench": "tsx bench/index.ts",
+    "smoke:summarizer": "bun run scripts/manual-tests/summarizer-live-sdk.ts",
+    "prepare": "simple-git-hooks || true",
+    "dev:release": "bun run scripts/dev/release.ts",
+    "dev:worktree": "bun run scripts/dev/worktree.ts",
+    "dev:pr-branch": "bun run scripts/dev/pr-branch.ts",
+    "dev:skill-eval": "bun run scripts/dev/skill-eval.ts",
+    "dev:test": "bun run scripts/dev/test-agent.ts",
+    "dev:status": "bun run scripts/dev/check-status.ts",
+    "dev:verify:skills": "bun run scripts/dev/verify-skills.ts",
+    "dev:verify:agents": "bun run scripts/dev/verify-agents.ts",
+    "dev:doctor": "bun run scripts/dev/dev-doctor.ts"
+  },
+  "simple-git-hooks": {
+    "pre-push": "bun run gate"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "gray-matter": "^4.0.3",
+    "ora": "^8.0.1",
+    "table": "^6.8.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/bun": "^1.1.0",
+    "@types/node": "^20.0.0",
+    "esbuild": "^0.21.0",
+    "simple-git-hooks": "^2.13.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.2.0",
+    "zod-to-json-schema": "3.25.2"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "opencode",
+    "anvil",
+    "skills",
+    "hooks",
+    "cli",
+    "tui"
+  ],
+  "author": "Anvil maintainers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyprtuna/anvil.git"
+  },
+  "homepage": "https://github.com/hyprtuna/anvil#readme",
+  "bugs": {
+    "url": "https://github.com/hyprtuna/anvil/issues"
+  },
+  "license": "MIT"
+}

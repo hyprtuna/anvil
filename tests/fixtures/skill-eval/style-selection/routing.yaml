@@ -1,0 +1,18 @@
+---
+cases:
+  - prompt: "I need a visual style for a fintech dashboard."
+    shouldMatch: true
+    description: "industry-to-style routing"
+  - prompt: "Which UI style fits a wellness booking app?"
+    shouldMatch: true
+    description: "industry-to-style routing"
+  - prompt: "We want a brutalist look for our crypto landing."
+    shouldMatch: true
+    description: "named-style routing"
+  - prompt: "Fix this null pointer exception in Go."
+    shouldMatch: false
+    description: "should not match debugging requests"
+  - prompt: "Refactor the pagination logic."
+    shouldMatch: false
+    description: "should not match refactoring requests"
+---

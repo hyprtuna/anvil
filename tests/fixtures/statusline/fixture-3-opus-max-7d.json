@@ -1,0 +1,9 @@
+{
+  "cwd": "/home/user/project",
+  "session_id": "session-3",
+  "model": { "id": "claude-opus-4-7", "display_name": "Opus" },
+  "output_style": { "name": "max" },
+  "rate_limits": {
+    "seven_day": { "used_percentage": 80, "resets_at": 1900183600 }
+  }
+}

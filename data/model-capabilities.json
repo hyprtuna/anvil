@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-14T00:00:00.000Z",
+  "source": "manual-curated-v1",
+  "models": [
+    {
+      "id": "claude-haiku-4-5",
+      "provider": "anthropic",
+      "family": "claude-haiku",
+      "context_window": 200000,
+      "max_output_tokens": 8192,
+      "supported_efforts": [],
+      "capabilities": {
+        "vision": true,
+        "json_mode": true,
+        "tool_use": true,
+        "extended_thinking": false
+      },
+      "notes": "Haiku does not accept an effort parameter (omit from API calls)."
+    },
+    {
+      "id": "claude-sonnet-4-6",
+      "provider": "anthropic",
+      "family": "claude-sonnet",
+      "context_window": 200000,
+      "max_output_tokens": 64000,
+      "supported_efforts": ["low", "medium", "high", "max"],
+      "capabilities": {
+        "vision": true,
+        "json_mode": true,
+        "tool_use": true,
+        "extended_thinking": false
+      },
+      "notes": "Does not support xhigh effort."
+    },
+    {
+      "id": "claude-opus-4-7",
+      "provider": "anthropic",
+      "family": "claude-opus",
+      "context_window": 200000,
+      "max_output_tokens": 32000,
+      "supported_efforts": ["low", "medium", "high", "xhigh", "max"],
+      "capabilities": {
+        "vision": true,
+        "json_mode": true,
+        "tool_use": true,
+        "extended_thinking": true
+      },
+      "notes": "Supports all five effort levels including xhigh and extended_thinking."
+    }
+  ]
+}

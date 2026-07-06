@@ -1,0 +1,221 @@
+{
+  "$schema": "https://anvil.dev/schemas/models.json",
+  "version": "1.0",
+  "defaults": {
+    "model": "opus",
+    "effort": "high",
+    "fallback_model": "haiku",
+    "fallback_chain": [
+      "sonnet",
+      "haiku"
+    ],
+    "max_tokens": 8192
+  },
+  "groups": {
+    "planning": {
+      "model": "opus",
+      "effort": "high",
+      "fallback_chain": [],
+      "description": "Deep reasoning: architecture, breakdown, risk analysis",
+      "members": [
+        "planning",
+        "plan-writing",
+        "brainstorming",
+        "brainstorm-spec",
+        "codebase-mapping",
+        "project-exploration",
+        "deep-diving",
+        "skill-selection",
+        "orchestrator",
+        "orchestrator-guide",
+        "researcher",
+        "framework-selector",
+        "research",
+        "orchestration",
+        "framework-selection",
+        "sdd-workflow"
+      ]
+    },
+    "development": {
+      "model": "opus",
+      "effort": "high",
+      "fallback_chain": [],
+      "description": "General coding, feature work, refactoring",
+      "members": [
+        "development",
+        "feature-development",
+        "ui-design",
+        "subagent-executor",
+        "test-driven-development",
+        "javascript-coding",
+        "typescript-coding",
+        "php-coding",
+        "python-coding",
+        "go-coding",
+        "rust-coding",
+        "java-coding",
+        "kotlin-coding",
+        "ruby-coding",
+        "mcp-builder"
+      ]
+    },
+    "review": {
+      "model": "opus",
+      "effort": "high",
+      "fallback_chain": [],
+      "description": "Code review, security audit, quality gate",
+      "members": [
+        "code-review",
+        "code-reviewer",
+        "plan-verification",
+        "plan-verifier",
+        "silent-failure-hunter",
+        "test-analyzer",
+        "code-simplifier",
+        "doc-verifier",
+        "security-auditing",
+        "performance-profiling",
+        "dependency-management",
+        "verification",
+        "review-requesting",
+        "review-response",
+        "slop-removal",
+        "silent-failure-discipline",
+        "test-analysis",
+        "code-simplification",
+        "two-stage-review",
+        "php-review"
+      ]
+    },
+    "testing": {
+      "model": "opus",
+      "effort": "high",
+      "fallback_chain": [],
+      "description": "Test generation, coverage analysis, test running",
+      "members": [
+        "javascript-testing",
+        "php-testing",
+        "python-testing",
+        "go-testing",
+        "rust-testing"
+      ]
+    },
+    "automation": {
+      "model": "opus",
+      "effort": "high",
+      "fallback_chain": [],
+      "description": "Fast repetitive tasks: hooks, formatting, commit messages",
+      "members": [
+        "git-workflow",
+        "github-workflow",
+        "gitlab-workflow",
+        "doc-writing"
+      ]
+    },
+    "autonomous": {
+      "model": "opus",
+      "effort": "high",
+      "fallback_chain": [],
+      "description": "Long-running autonomous agents with full task authority",
+      "members": [
+        "ultra-worker",
+        "autonomous-execution"
+      ]
+    },
+    "meta": {
+      "model": "opus",
+      "effort": "high",
+      "fallback_chain": [],
+      "description": "Skill system maintenance and self-improvement",
+      "members": [
+        "skill-creation",
+        "learning",
+        "debugging",
+        "using-anvil",
+        "claude-md-improvement"
+      ]
+    },
+    "workflow": {
+      "model": "opus",
+      "effort": "high",
+      "fallback_chain": [],
+      "description": "Workflow skills: guided feature development, git worktrees, branching strategies",
+      "members": [
+        "default-feature",
+        "using-git-worktrees"
+      ]
+    },
+    "cost-optimised": {
+      "model": "opus",
+      "effort": "high",
+      "fallback_chain": [],
+      "description": "Utility/transformation skills that run on Haiku to keep token cost minimal",
+      "members": [
+        "summarization"
+      ]
+    }
+  },
+  "overrides": {
+    "ultra-worker": {
+      "model": "opus",
+      "effort": "max",
+      "fallback_chain": [],
+      "max_tokens": 32768,
+      "note": "Autonomous agent needs full context"
+    },
+    "skill-selection": {
+      "model": "haiku",
+      "effort": "low",
+      "fallback_chain": [],
+      "note": "Lightweight routing, not deep reasoning"
+    },
+    "security-auditing": {
+      "model": "opus",
+      "effort": "max",
+      "fallback_chain": [],
+      "note": "Security work must never cut corners"
+    }
+  },
+  "effort_levels": {
+    "low": {
+      "description": "Fast, minimal reasoning — routing, formatting, simple transforms"
+    },
+    "medium": {
+      "description": "Standard reasoning — most development and testing tasks"
+    },
+    "high": {
+      "description": "Extended thinking — architecture, complex debugging, review"
+    },
+    "xhigh": {
+      "description": "Deep reasoning — complex debugging, multi-file refactors, design review (Opus 4.7 default)"
+    },
+    "max": {
+      "description": "Maximum effort — autonomous agents, security audits, planning"
+    }
+  },
+  "model_aliases": {
+    "fast": "haiku",
+    "balanced": "sonnet",
+    "powerful": "opus",
+    "default": "sonnet"
+  },
+  "disabled": {
+    "skills": [],
+    "hooks": [
+      "post-tool-use",
+      "post-test-run",
+      "context-monitor",
+      "prompt-guard",
+      "phase-boundary",
+      "read-guard",
+      "workflow-guard",
+      "session-end",
+      "pre-compact",
+      "notification",
+      "stop",
+      "subagent-stop",
+      "on-large-output"
+    ],
+    "agents": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_comment": "AskUserQuestion payload variant for the decisions template. Used when the active surface is Claude Code and the host agent wants to surface a decision as an AskUserQuestion call. Each option carries label + description so the renderer can build a CC-native payload.",
+  "intro": "Pick the option that best fits this spec's constraints.",
+  "options": [
+    {
+      "label": "A",
+      "description": "<≤2-line explanation; what you give up vs the others>"
+    },
+    {
+      "label": "B",
+      "description": "<≤2-line explanation>"
+    }
+  ],
+  "recommended": "A",
+  "rationale": "<why this option wins given THIS spec's constraints>"
+}

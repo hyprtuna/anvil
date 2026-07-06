@@ -1,0 +1,9 @@
+# Anvil Bun configuration
+
+[install]
+# Bun's lockfile lives alongside package-lock.json; we don't vendor node_modules.
+registry = "https://registry.npmjs.org/"
+
+# Note: Bun's `[test]` table expects `preload` to be an array of files. We do
+# not run tests with `bun test` (Vitest is the runner), so we omit the table to
+# avoid invalidating bunfig.toml when bun parses it for other commands.

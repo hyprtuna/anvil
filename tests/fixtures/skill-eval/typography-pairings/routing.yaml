@@ -1,0 +1,15 @@
+---
+cases:
+  - prompt: "What font should I pair with Canela for an editorial site?"
+    shouldMatch: true
+    description: "explicit pairing routing"
+  - prompt: "Recommend a typography pairing for a dev tool."
+    shouldMatch: true
+    description: "industry-to-pairing routing"
+  - prompt: "We only use Inter — is that fine?"
+    shouldMatch: true
+    description: "Inter-only anti-pattern routing"
+  - prompt: "How do I config ESLint?"
+    shouldMatch: false
+    description: "should not match tooling questions"
+---

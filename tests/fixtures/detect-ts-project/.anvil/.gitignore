@@ -1,0 +1,4 @@
+# These files are written by session-start on every test run — ignore to prevent
+# timestamp drift polluting `git status`. (ANV-0145)
+project.json
+registry.json
