@@ -2,7 +2,13 @@
 
 > Language-aware, role-aware skill system for Claude Code and OpenCode — hybrid CLI and plugin.
 
-**Status:** v0.18.0. Skill system, layered model-and-effort routing, hook runtime, orchestration agents, and OpenCode plugin parity all shipped.
+> [!IMPORTANT]
+> **Anvil is archived.** It is complete and no longer developed. Its successor is
+> **[Aegis](https://github.com/hyprtuna/aegis)**: the same curated skill, agent, and
+> template system rebuilt plugin-first, so hosts load it natively with no CLI, no
+> build step, and no separate install. Start there.
+
+**Status:** v0.18.0, final release. Skill system, layered model-and-effort routing, hook runtime, orchestration agents, and OpenCode plugin parity all shipped.
 
 ## What it does
 
